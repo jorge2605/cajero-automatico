@@ -1,0 +1,96 @@
+.balance-container{
+    background-color: #F7F7F7;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.balance{
+    background-color: #AC2828;
+    border-radius: 19px;
+    color: #ffffff;
+    font-family: Roboto;
+    display: grid;
+    justify-items: center;
+    width: 200%;
+}
+
+.balance div{
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.retiros-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    font-family: Roboto;
+}
+
+.retiros{
+    color: #D4052A;
+}
+
+.ingresos{
+    color: #0FB001;
+}
+
+.ventana-emergente {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.contenido {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#cerrarVentana {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.transaction-container{
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    margin: 5px;
+}
+
+#mostrarVentana{
+    border: 0;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    width: 15%;
+    padding: 10px;
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+#mostrarVentana:hover{
+    background-color: #0477d5;
+    color: #ffffff;
+    transition: 1s;
+}
