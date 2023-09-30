@@ -16,24 +16,55 @@
             </div>
             <h3>Pesos Mexicanos</h3>
         </div>
-    </section>
+    </section>  
     <section class="transaction-container">
         <button id="mostrarVentana">Crear transaccion</button>
     </section>
     <section class="retiros-container">
         <div class="retiros">
-            <h3>Retiros -</h3>
+            <button id="btnRetiros">Retiros -</button>
         </div>
         <div class="ingresos">
-            <h3>Ingresos +</h3>
+            <button id="btnIngresos">Ingresos +</button>
+        </div>
+    </section>
+    <section class="data-container">
+        <div class="withdrawal-history">
+            <div class="withdrawal">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.29374 10.7063C6.68437 11.0969 7.31874 11.0969 7.70937 10.7063L12.7094 5.70625C13.1 5.31563 13.1 4.68125 12.7094 4.29063C12.3187 3.9 11.6844 3.9 11.2937 4.29063L6.99999 8.58438L2.70624 4.29375C2.31562 3.90313 1.68124 3.90313 1.29062 4.29375C0.899994 4.68438 0.899994 5.31875 1.29062 5.70938L6.29062 10.7094L6.29374 10.7063Z" fill="#762400"/>
+                </svg>
+                <h3>Descripcion de egreso</h2>
+                <h4>-150 MXN</h4>
+            </div>
+        </div>
+        <div class="income-history">
+            <div class="income">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.70626 5.29375C7.31563 4.90312 6.68126 4.90312 6.29063 5.29375L1.29063 10.2937C0.900005 10.6844 0.900005 11.3187 1.29063 11.7094C1.68126 12.1 2.31563 12.1 2.70626 11.7094L7.00001 7.41562L11.2938 11.7062C11.6844 12.0969 12.3188 12.0969 12.7094 11.7062C13.1 11.3156 13.1 10.6812 12.7094 10.2906L7.70938 5.29062L7.70626 5.29375Z" fill="#196200"/>
+                    </svg>
+                <div class="income-div">
+                    <h3>Descripcion de ingreso</h2>
+                    <h4>-150 MXN</h4>
+                </div>
+            </div>
         </div>
     </section>
 
     <div class="ventana-emergente" id="miVentanaEmergente">
         <div class="contenido">
-            <h2>Esta es la ventana emergente</h2>
-            <p>Contenido de la ventana emergente.</p>
-            <button id="cerrarVentana">Cerrar</button>
+            <h2>Generar transaccion</h2>
+            <div>
+                <input type="radio" name="radio" id="radio-retiro">
+                <label for="radio-retiro">Retiro</label>
+                <input type="radio" name="radio" id="radio-ingreso">
+                <label for="radio-ingreso">Ingreso</label>
+            </div>
+            <label for="txtIngreso">$</label>
+            <input type="text" name="" id="txtIngreso">
+            <div>
+                <button id="cerrarVentana">Guardar</button>
+            </div>
         </div>
     </div>
 </body>
