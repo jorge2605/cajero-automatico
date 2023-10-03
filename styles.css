@@ -84,6 +84,7 @@
     align-items: center;
     box-shadow: 10px 10px 10px 0 #0c0c0c42;
     display: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .contenido {
@@ -93,6 +94,14 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     display: grid;
+    gap: 10px;
+}
+
+.contenido input{
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
 }
 
 #cerrarVentana {

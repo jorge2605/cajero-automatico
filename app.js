@@ -52,12 +52,13 @@ function createWithdrawal(){
             container = retirosContainer;
         }
         let band = true;
-        console.dir(txtSaldo);
         if(container === ingresosContainer){
             acum += Number(txtIngreso.value);
             txtSaldo.innerText = acum;
         }else if(container === retirosContainer){
-            if((Number(txtIngreso.value) - acum) < 0){
+            let num = (Number(txtIngreso.value));
+            let tot = acum - num;
+            if(tot < 0){
                 alert("Saldo insuficiente");
                 band = false;
             }else{
@@ -65,7 +66,8 @@ function createWithdrawal(){
                 txtSaldo.innerText = acum;
             }
         }
-        console.log(acum);
+        const numeroFormateado = acum.toLocaleString();
+        txtSaldo.innerHTML = numeroFormateado;
         if(band){
             const descripcion = txtDescripcion.value;
             const saldo = txtIngreso.value;
@@ -115,3 +117,22 @@ btnCancelar.addEventListener('click',cancelar);
 btnRetiros.addEventListener('click',viewRetiros);
 btnIngresos.addEventListener('click',viewIngresos);
 btnGuardar.addEventListener('click',createWithdrawal);
+
+const mysql = require('mysql2');
+
+// Configura la conexión a la base de datos
+const connection = mysql.createConnection({
+  host: '192.168.100.40',
+  user: 'Jorge',
+  password: '123456789Aa.',
+  database: 'towi'
+});
+
+// Conéctate a la base de datos
+connection.connect((err) => {
+  if (err) {
+    console.error('Error al conectar a MySQL:', err);
+    return;
+  }
+  console.log('Conexión a MySQL establecida.');
+});
