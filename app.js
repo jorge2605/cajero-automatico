@@ -12,8 +12,18 @@ const contRet = document.querySelector('.retiros');
 const btnIngresos = document.querySelector('#btnIngresos');
 const contIng = document.querySelector('#ingresos');
 const txtSaldo = document.querySelector('#saldo');
+const txtPassword = document.querySelector('#password');
+const txtUser = document.querySelector('#user');
+const btnLogin = document.querySelector('#login');
+const inicioContainer = document.querySelector('.inicio-sesion');
 
 let acum = 0;
+
+const users = [
+    { user: 'jorge', lastname: 'Santacruz', password: '1234' },
+    { user: 'valeria', lastname: 'torres', password: '147' },
+    { user: 'karol', lastname: 'santacruz', password: '258' }
+  ];
 
 mostrarVentanaBtn.addEventListener('click', () => {
     ventanaEmergente.style.display = 'block';
@@ -113,26 +123,23 @@ function cancelar(){
     ventanaEmergente.style.display = "none";
 }
 
+function checkUser(){
+    const checkUser = users.find(user => user.user === txtUser.value);
+    console.dir(txtPassword)
+    if(checkUser){
+        const password = users.find(user => user.password === txtPassword.value);
+        if(password){
+            inicioContainer.style.display = 'none';
+        }else{
+            alert('Contraseña incorrecta');
+        }
+    }else{
+        alert('El usuario que ingresaste no existe');
+    }
+}
+
+btnLogin.addEventListener('click',checkUser);
 btnCancelar.addEventListener('click',cancelar);
 btnRetiros.addEventListener('click',viewRetiros);
 btnIngresos.addEventListener('click',viewIngresos);
 btnGuardar.addEventListener('click',createWithdrawal);
-
-const mysql = require('mysql2');
-
-// Configura la conexión a la base de datos
-const connection = mysql.createConnection({
-  host: '192.168.100.40',
-  user: 'Jorge',
-  password: '123456789Aa.',
-  database: 'towi'
-});
-
-// Conéctate a la base de datos
-connection.connect((err) => {
-  if (err) {
-    console.error('Error al conectar a MySQL:', err);
-    return;
-  }
-  console.log('Conexión a MySQL establecida.');
-});

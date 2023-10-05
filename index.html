@@ -3,59 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./styles.css">
     
     <title>Document</title>
 </head>
 <body>
-    <section class="balance-container">
-        <div class="balance">
-            <h3>Balance</h3>
-            <div>
-                <span>$ </span><span id="saldo">00.00</span>
+    <section>
+        <section class="balance-container">
+            <div class="balance">
+                <h3>Balance</h3>
+                <div>
+                    <span>$ </span><span id="saldo">00.00</span>
+                </div>
+                <h3>Pesos Mexicanos</h3>
             </div>
-            <h3>Pesos Mexicanos</h3>
+        </section>  
+        <section class="transaction-container">
+            <button id="mostrarVentana">Crear transaccion</button>
+        </section>
+        <section class="retiros-container">
+            <div class="retiros">
+                <button id="btnRetiros">Retiros -</button>
+            </div>
+            <div class="ingresos">
+                <button id="btnIngresos">Ingresos +</button>
+            </div>
+        </section>
+        <section class="data-container">
+            <div class="withdrawal-history">
+                            
+            </div>
+            <div class="income-history">
+                
+            </div>
+        </section>
+
+        <div class="ventana-emergente" id="miVentanaEmergente">
+            <div class="contenido">
+                <h2>Generar transaccion</h2>
+                <div>
+                    <input type="radio" name="radio" id="radio-retiro">
+                    <label for="radio-retiro">Retiro</label>
+                    <input type="radio" name="radio" id="radio-ingreso">
+                    <label for="radio-ingreso">Ingreso</label>
+                </div>
+                <input placeholder="Saldo" type="text" name="" id="txtIngreso">
+                <input placeholder="Descripcion" type="text" name="" id="txtDescripcion">
+                
+                
+                <div>
+                    <button id="cerrarVentana">Guardar</button>
+                    <button id="cancelarVentana">Cancelar</button>
+                </div>
+            </div>
         </div>
-    </section>  
-    <section class="transaction-container">
-        <button id="mostrarVentana">Crear transaccion</button>
     </section>
-    <section class="retiros-container">
-        <div class="retiros">
-            <button id="btnRetiros">Retiros -</button>
-        </div>
-        <div class="ingresos">
-            <button id="btnIngresos">Ingresos +</button>
-        </div>
-    </section>
-    <section class="data-container">
-        <div class="withdrawal-history">
-                        
-        </div>
-        <div class="income-history">
-            
-        </div>
+    <section class="inicio-sesion">
+        <section class="inicio-container">
+            <section class="form">
+                <input type="text" name="user" id="user" placeholder="user">
+                <input type="password" name="password" id="password" placeholder="password">
+                <button id="login">LOGIN</button>
+                <div class="account">
+                    <h4>No estas registrado?</h5>
+                    <a href="#">Crear una cuenta</a>
+                </div>
+            </section>
+        </section>
     </section>
 
-    <div class="ventana-emergente" id="miVentanaEmergente">
-        <div class="contenido">
-            <h2>Generar transaccion</h2>
-            <div>
-                <input type="radio" name="radio" id="radio-retiro">
-                <label for="radio-retiro">Retiro</label>
-                <input type="radio" name="radio" id="radio-ingreso">
-                <label for="radio-ingreso">Ingreso</label>
-            </div>
-            <input placeholder="Saldo" type="text" name="" id="txtIngreso">
-            <input placeholder="Descripcion" type="text" name="" id="txtDescripcion">
-            
-            
-            <div>
-                <button id="cerrarVentana">Guardar</button>
-                <button id="cancelarVentana">Cancelar</button>
-            </div>
-        </div>
-    </div>
 </body>
-<script src="/app.js"></script>
+<script src="./app.js"></script>
 </html>

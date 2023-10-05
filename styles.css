@@ -223,3 +223,93 @@ input[type="radio"]{
 #txtIngreso{
     margin-top: 10px;
 }
+
+.inicio-sesion{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /* transition: 1s; */
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px 0 #0c0c0c42;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: grid;
+    background-color: #80bb5f;
+}
+
+.inicio-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #ffffff;
+}
+
+.form{
+    display: grid;
+    gap: 10px;
+    margin: 30px;
+    font-family: Roboto;
+}
+
+.form input[type="text"]{
+    border: 0;
+    border-radius: 2px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #ededed;
+    color: #616161;
+}
+
+.form input[type="text"]:focus{
+    outline: none;
+}
+
+.form input[type="text"]::placeholder{
+    color: #9f9f9f;
+}
+
+.form input[type="password"]{
+    border: 0;
+    border-radius: 2px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #ededed;
+    color: #616161;
+}
+
+.form input[type="password"]:focus{
+    outline: none;
+}
+
+.form input[type="password"]::placeholder{
+    color: #9f9f9f;
+}
+
+.account{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    color: #39ff28;
+}
+
+#login{
+    background-color: #22821a;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#login:hover{
+    background-color: #12490d;
+    transition: 1s;
+    transform: scale(1.1);
+}
